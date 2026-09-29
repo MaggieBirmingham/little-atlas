@@ -20,8 +20,8 @@ if (!isSupabaseConfigured) {
 // A harmless placeholder URL lets the client construct without throwing when
 // unconfigured (e.g. local dev before .env is set up, or CI unit tests).
 export const supabase = createClient(
-  url ?? 'https://placeholder.supabase.co',
-  anonKey ?? 'placeholder-anon-key',
+  isSupabaseConfigured ? url! : 'https://placeholder.supabase.co',
+isSupabaseConfigured ? anonKey! : 'placeholder-anon-key',
   {
     auth: {
       persistSession: true,
