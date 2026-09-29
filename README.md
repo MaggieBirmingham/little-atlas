@@ -337,3 +337,4 @@ options are neutral and optional.
 See `.env.example`. Only `VITE_*` (public, browser-safe) variables are used by the frontend. The `service_role`
 key is never used by the frontend and never set as a `VITE_*` variable — it exists only inside the
 `delete-account` Edge Function's server-side runtime.
+Deployment setup started.
